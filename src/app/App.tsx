@@ -1,7 +1,14 @@
+import { Header } from "../shared/ui/header/header.tsx";
+import Router from "./Router.tsx";
+import { BrowserRouter } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <h1>Vite + React</h1>
+      <BrowserRouter>
+        <Header />
+        <Router />
+      </BrowserRouter>
     </>
   );
 }
