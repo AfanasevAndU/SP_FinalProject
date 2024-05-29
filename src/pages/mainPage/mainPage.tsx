@@ -1,7 +1,7 @@
-import { PageContent } from "./mainPage.styles";
+import { PageContent } from "../../shared/ui/pageContent/pageContent.styles";
 
 const MainPage = () => {
-  return <PageContent></PageContent>;
+  return <PageContent>123</PageContent>;
 };
 
 export default MainPage;

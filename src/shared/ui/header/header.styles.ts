@@ -17,7 +17,7 @@ export const HeaderContainer = styled.div({
 
 export const AuthButtonGroup = styled.div({
   display: "flex",
-  paddingRight: "20px",
+  paddingRight: "50px",
 });
 
 export const MainButtonGroup = styled.div({

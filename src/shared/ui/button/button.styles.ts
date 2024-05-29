@@ -9,7 +9,7 @@ export const StyledButton = styled.button<ButtonProps>`
   color: ${(props) => (props.type === "light" ? "black" : "white")};
   border: 0;
   border-style: solid;
-  border-radius: ${(props) => (props.type === "box" ? "0px" : "5px")};
+  border-radius: ${(props) => (props.type === "box" ? "0px" : "10px")};
   padding-top: 5px;
   padding-bottom: 5px;
   align-items: center;

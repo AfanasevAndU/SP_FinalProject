@@ -12,8 +12,8 @@ export const Header = () => (
       <NavLink to="/">{<Button type="box">AUTOSMART</Button>}</NavLink>
     </MainButtonGroup>
     <AuthButtonGroup>
-      <Button onClick={() => {}}>Войти</Button>
-      <Button onClick={() => {}}>Зарегистрироваться</Button>
+      <NavLink to="/auth">{<Button>Вход</Button>}</NavLink>
+      <NavLink to="/registration">{<Button>Регистрация</Button>}</NavLink>
     </AuthButtonGroup>
   </HeaderContainer>
 );
