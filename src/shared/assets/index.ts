@@ -1,0 +1,13 @@
+export { default as Acura } from "./acura.svg";
+export { default as AlphaRomeo } from "./alpha-romeo.svg";
+export { default as BMW } from "./bmv.svg";
+export { default as Chevrolet } from "./chevrolet.svg";
+export { default as Honda } from "./honda.svg";
+export { default as Hyondai } from "./hyundai.svg";
+export { default as Infiniti } from "./infiniti.svg";
+export { default as Kia } from "./kia.svg";
+export { default as MercedesBenz } from "./mercedes.svg";
+export { default as Subaru } from "./subaru.svg";
+export { default as Tesla } from "./tesla.svg";
+export { default as Toyota } from "./toyota.svg";
+export { default as Volkswagen } from "./volkswagen.svg";

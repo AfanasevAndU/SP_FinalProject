@@ -1,4 +1,4 @@
-import { PageContent } from "../../shared/ui/pageContent/pageContent.styles";
+import { PageContent } from "../../shared/ui/pageContent/pageContent";
 import { Input } from "../../shared/ui/input";
 import {
   AuthContainer,
@@ -10,6 +10,7 @@ import {
 import { Button } from "../../shared/ui/button";
 import { Label } from "../../shared/ui/label";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const AuthPage = () => {
   const [email, setEmail] = useState("");
@@ -43,7 +44,7 @@ const AuthPage = () => {
           <Input
             value={password}
             onChange={handlePasswordChange}
-            placeholder="password"
+            placeholder="Password"
           ></Input>
           <ErrorText>{passwordError}</ErrorText>
         </InputContainer>
@@ -68,7 +69,9 @@ const AuthPage = () => {
             Войти
           </Button>
           <div>Или</div>
-          <Button>Зарегистрироваться</Button>
+          <NavLink to="/registration">
+            {<Button>Зарегистрироваться</Button>}
+          </NavLink>
         </ButtonContainer>
       </AuthContainer>
     </PageContent>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const PageContent = styled.div`
+export const PageContentContainer = styled.div`
   margin-top: 75px;
 `;

@@ -11,5 +11,5 @@ export interface PageContentProps {
   /**
    * Контент страницы
    */
-  content: ReactNode;
+  children: ReactNode;
 }
