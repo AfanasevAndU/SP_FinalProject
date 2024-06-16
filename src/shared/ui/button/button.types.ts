@@ -15,7 +15,15 @@ export interface ButtonProps {
   /**
    * Стиль кнопки в зависимости от типа.
    */
-  type?: "box" | "dark" | "light";
+  variant?: "text" | "contained" | "outlined";
+  /**
+   * Если true, то кнопка не активна
+   */
+  disabled?: boolean;
+  /**
+   * Inline стили для уникальных кнопок.
+   */
+  sx?: object;
   /**
    * Обработчик события нажатия на кнопку.
    */
