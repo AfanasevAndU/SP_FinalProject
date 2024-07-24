@@ -11,6 +11,7 @@ import { Label } from "../../shared/ui/label";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import React from "react";
+import { PageContent } from "../../shared/ui/page-content";
 
 const RegistrationPage = () => {
   const [email, setEmail] = useState("");
@@ -33,66 +34,68 @@ const RegistrationPage = () => {
   };
 
   return (
-    <RegistrationContainer>
-      <Title>Регистрация</Title>
-      <InputContainer>
-        <Label>Введите никнейм</Label>
-        <Input
-          value={nickname}
-          onChange={handleNicknameChange}
-          placeholder="Nickname"
-        ></Input>
-        <ErrorText>{nicknameError}</ErrorText>
-      </InputContainer>
-      <InputContainer>
-        <Label>Введите Эл.почту</Label>
-        <Input
-          value={email}
-          onChange={handleEmailChange}
-          placeholder="Email"
-        ></Input>
-        <ErrorText>{emailError}</ErrorText>
-      </InputContainer>
-      <InputContainer>
-        <Label>Введите пароль</Label>
-        <Input
-          value={password}
-          onChange={handlePasswordChange}
-          placeholder="Password"
-        ></Input>
-        <ErrorText>{passwordError}</ErrorText>
-      </InputContainer>
-      <ButtonContainer>
-        <Button
-          onClick={() => {
-            if (
-              email.length > 0 &&
-              password.length > 0 &&
-              nickname.length > 0
-            ) {
-              setEmailError("");
-              setPasswordError("");
-              setNicknameError("");
-              return;
-            }
+    <PageContent>
+      <RegistrationContainer>
+        <Title>Регистрация</Title>
+        <InputContainer>
+          <Label>Введите никнейм</Label>
+          <Input
+            value={nickname}
+            onChange={handleNicknameChange}
+            placeholder="Nickname"
+          ></Input>
+          <ErrorText>{nicknameError}</ErrorText>
+        </InputContainer>
+        <InputContainer>
+          <Label>Введите Эл.почту</Label>
+          <Input
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Email"
+          ></Input>
+          <ErrorText>{emailError}</ErrorText>
+        </InputContainer>
+        <InputContainer>
+          <Label>Введите пароль</Label>
+          <Input
+            value={password}
+            onChange={handlePasswordChange}
+            placeholder="Password"
+          ></Input>
+          <ErrorText>{passwordError}</ErrorText>
+        </InputContainer>
+        <ButtonContainer>
+          <Button
+            onClick={() => {
+              if (
+                email.length > 0 &&
+                password.length > 0 &&
+                nickname.length > 0
+              ) {
+                setEmailError("");
+                setPasswordError("");
+                setNicknameError("");
+                return;
+              }
 
-            if (email.length == 0) {
-              setEmailError("Пожалуйста, введите email");
-            }
-            if (nickname.length == 0) {
-              setNicknameError("Пожалуйста, введите никнейм");
-            }
-            if (password.length == 0) {
-              setPasswordError("Пожалуйста, введите пароль");
-            }
-          }}
-        >
-          Зарегистрироваться
-        </Button>
-        <div>Или</div>
-        <NavLink to="/registration">{<Button>Войти</Button>}</NavLink>
-      </ButtonContainer>
-    </RegistrationContainer>
+              if (email.length == 0) {
+                setEmailError("Пожалуйста, введите email");
+              }
+              if (nickname.length == 0) {
+                setNicknameError("Пожалуйста, введите никнейм");
+              }
+              if (password.length == 0) {
+                setPasswordError("Пожалуйста, введите пароль");
+              }
+            }}
+          >
+            Зарегистрироваться
+          </Button>
+          <div>Или</div>
+          <NavLink to="/registration">{<Button>Войти</Button>}</NavLink>
+        </ButtonContainer>
+      </RegistrationContainer>
+    </PageContent>
   );
 };
 

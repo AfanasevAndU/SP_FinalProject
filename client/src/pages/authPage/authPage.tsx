@@ -11,6 +11,7 @@ import { Label } from "../../shared/ui/label";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import React from "react";
+import { PageContent } from "../../shared/ui/page-content";
 
 const AuthPage = () => {
   const [email, setEmail] = useState("");
@@ -27,52 +28,54 @@ const AuthPage = () => {
   };
 
   return (
-    <AuthContainer>
-      <Title>Авторизация</Title>
-      <InputContainer>
-        <Label>Введите Эл.почту</Label>
-        <Input
-          value={email}
-          onChange={handleEmailChange}
-          placeholder="Email"
-        ></Input>
-        <ErrorText>{emailError}</ErrorText>
-      </InputContainer>
-      <InputContainer>
-        <Label>Введите пароль</Label>
-        <Input
-          value={password}
-          onChange={handlePasswordChange}
-          placeholder="Password"
-        ></Input>
-        <ErrorText>{passwordError}</ErrorText>
-      </InputContainer>
-      <ButtonContainer>
-        <Button
-          onClick={() => {
-            if (email.length > 0 && password.length > 0) {
-              console.log({ email }, { password });
-              setEmailError("");
-              setPasswordError("");
-              return;
-            }
+    <PageContent>
+      <AuthContainer>
+        <Title>Авторизация</Title>
+        <InputContainer>
+          <Label>Введите Эл.почту</Label>
+          <Input
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Email"
+          ></Input>
+          <ErrorText>{emailError}</ErrorText>
+        </InputContainer>
+        <InputContainer>
+          <Label>Введите пароль</Label>
+          <Input
+            value={password}
+            onChange={handlePasswordChange}
+            placeholder="Password"
+          ></Input>
+          <ErrorText>{passwordError}</ErrorText>
+        </InputContainer>
+        <ButtonContainer>
+          <Button
+            onClick={() => {
+              if (email.length > 0 && password.length > 0) {
+                console.log({ email }, { password });
+                setEmailError("");
+                setPasswordError("");
+                return;
+              }
 
-            if (email.length == 0) {
-              setEmailError("Пожалуйста, введите email");
-            }
-            if (password.length == 0) {
-              setPasswordError("Пожалуйста, введите пароль");
-            }
-          }}
-        >
-          Войти
-        </Button>
-        <div>Или</div>
-        <NavLink to="/registration">
-          {<Button>Зарегистрироваться</Button>}
-        </NavLink>
-      </ButtonContainer>
-    </AuthContainer>
+              if (email.length == 0) {
+                setEmailError("Пожалуйста, введите email");
+              }
+              if (password.length == 0) {
+                setPasswordError("Пожалуйста, введите пароль");
+              }
+            }}
+          >
+            Войти
+          </Button>
+          <div>Или</div>
+          <NavLink to="/registration">
+            {<Button>Зарегистрироваться</Button>}
+          </NavLink>
+        </ButtonContainer>
+      </AuthContainer>
+    </PageContent>
   );
 };
 
