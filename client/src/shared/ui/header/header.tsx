@@ -1,13 +1,14 @@
 import {
-  HeaderContainer,
+  StyledHeader,
   AuthButtonGroup,
   MainButtonGroup,
 } from "./header.styles";
 import { Button } from "../button";
 import { NavLink } from "react-router-dom";
+import React from "react";
 
 export const Header = () => (
-  <HeaderContainer>
+  <StyledHeader>
     <MainButtonGroup>
       <NavLink to="/">
         {
@@ -30,5 +31,5 @@ export const Header = () => (
       <NavLink to="/auth">{<Button>Вход</Button>}</NavLink>
       <NavLink to="/registration">{<Button>Регистрация</Button>}</NavLink>
     </AuthButtonGroup>
-  </HeaderContainer>
+  </StyledHeader>
 );

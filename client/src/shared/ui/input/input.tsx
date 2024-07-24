@@ -1,6 +1,7 @@
 import { FC, useState } from "react";
 import { InputProps } from "./input.types";
 import { StyledInput } from "./input.styles";
+import React from "react";
 
 export const Input: FC<InputProps> = ({ onChange, placeholder, id }) => {
   const [searchTerm, setSearchTerm] = useState("");
